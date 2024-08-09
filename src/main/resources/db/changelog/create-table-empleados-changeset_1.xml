@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="JJCM">
+
+        <createTable tableName="empleados">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="nombre" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="apellido" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="numero_vendedor" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="cargo" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="fecha_contratacion" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="estado" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+
+</databaseChangeLog>
